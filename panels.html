@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>fargogo</title>
+    <title>法兔兔 - 图片原创保护维权平台</title>
     <!-- Bootstrap core CSS -->
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
@@ -539,32 +539,30 @@
     <!--script for this page-->
     <script src="assets/js/sparkline-chart.js"></script>    
     
+	<script>
+	$('.start-to-chat').on('click', function(e) {
+		
+		$('iframe, .iframe-wrapper').fadeIn();
+		setTimeout(function() {
+			$('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=kdjff05320d1f#/robot/product/59cc50b57dfff4352456f23f");
+		});
+	});
 
 
-  
-  $('.start-to-chat').on('click', function(e) {
-	  
-      $('iframe, .iframe-wrapper').fadeIn();
-	  setTimeout(function() {
-		  $('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=kdjff05320d1f#/robot/product/59cc50b57dfff4352456f23f");
-	  });
-  });
+	$('.iframe-wrapper').on('mouseover', function(e) {
+		$('body').css({'overflow': "hidden"});
+	});
 
+	$('.iframe-wrapper').on('mouseout', function(e) {
+		$('body').css({'overflow': "auto"});
+	});
 
-  $('.iframe-wrapper').on('mouseover', function(e) {
-      $('body').css({'overflow': "hidden"});
-  });
+	$('.iframe-wrapper .close').on('click', function(e) {
+		$('iframe, .iframe-wrapper').fadeOut();
+	});
+	</script>
 
-  $('.iframe-wrapper').on('mouseout', function(e) {
-      $('body').css({'overflow': "auto"});
-  });
-
-  $('.iframe-wrapper .close').on('click', function(e) {
-      $('iframe, .iframe-wrapper').fadeOut();
-  });
-
-  </script>
-
+ 
 
   </body>
 </html>
