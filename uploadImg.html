@@ -103,7 +103,7 @@
          	<i class="fa fa-plus" style="font-size: 180px;"></i>
          </label>
          <div style="margin-top: 30px">
-         	 <input type="button" value="上传云盘" class="btn btn-theme" style="width: 49%">
+         	 <input type="button" value="上传云盘" class="btn btn-theme" style="width: 49%" id='js-uploadBtn'>
          <input type="button" value="开启保护" class="btn btn-theme" style="width: 49%">
          </div>
      </div>
@@ -138,11 +138,27 @@
     
     
   <script>
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
+     $(function(){
+         $('#js-uploadBtn').click(function(){
+          var fileObj = $('#file').get(0).files[0]
+          var formData = new FormData();
+    formData.append('file', fileObj);
+    $.ajax({
+        url: "127.0.0.1/upload",
+        type: "post",
+        dataType: "json",
+        data: formData,
+        async: false,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (json_data) {
+            alert("恭喜你！上传成功");
+        },
+    });
+         })
       });
+
 
   </script>
 
