@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Back to top button */
-.back-to-top {
+.back-to-top, .start-to-chat {
   position: fixed;
   display: none;
   background: #18d26e;
@@ -50,7 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 11;
 }
 
-.back-to-top i {
+.start-to-chat{
+	bottom: 80px;
+	display: block;
+}
+
+.back-to-top i, .start-to-chat i {
   padding-top: 12px;
   color: #fff;
 }
@@ -1449,4 +1454,27 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+
+
+iframe{
+	width:100%;
+	height:100%;
+}
+.iframe-wrapper{
+	position: fixed;
+	width: 540px;
+    height: 650px;
+	display:none;
+    bottom: 50px;
+    right: 100px;
+	z-index:999999;
+}
+.iframe-wrapper .close{
+	position: relative;
+    top: 43px;
+    right: 13px;
+    font-size: 30px;
+    color: white;
 }
