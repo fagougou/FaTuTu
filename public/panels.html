@@ -115,8 +115,8 @@
 					<!-- sidebar menu start-->
 					<ul class="sidebar-menu" id="nav-accordion">
 						
-              			<p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              			<h5 class="centered">精灵的猪</h5>
+              			<p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+              			<h5 class="centered">法兔兔</h5>
               	  		
 						<li class="mt">
 							<a href="uploadImg.html">
@@ -133,9 +133,9 @@
 						</li>
 
 						<li class="mt">
-							<a href="#">
+							<a href="account.html">
 								<i class="fa fa-dashboard"></i>
-								<span>账号管理</span>
+								<span>账户管理</span>
 							</a>
 						</li>
 					</ul>
@@ -207,14 +207,14 @@
   				imgUrls.push("img/about-plan.jpg");
 				$('#img-list').empty();
 				imgUrls.forEach(function(imgUrl) {
-					$('#img-list').append('<div class="col-lg-4 col-md-4 col-sm-4 mb ">'+
+					$('#img-list').append('<a class="col-lg-4 col-md-4 col-sm-4 mb " href="timeline.html">'+
 						'<div class="twitter-panel pn" style="overflow:hidden">'+
-						'<img src="'+imgUrl+'" class="img-circle" style="height:100%">'+
+						'<img src="'+imgUrl+'" class="img-circle" style="height:100%;width:100%">'+
 						'</div>'+
 						'<div class="op-panel">'+
-						'<span class="fa fa-feed"></span> 传播 0 &nbsp;&nbsp;&nbsp;<span class="fa fa-eye"></span> 展示 849'+
+						'<span class="fa fa-feed"></span> 传播 0 &nbsp;&nbsp;&nbsp;<span class="fa fa-eye"></span> 展示 849 &nbsp;&nbsp;&nbsp;维权 '+
 						'</div>'+
-						'</div>'
+						'</a>'
 					);	
 				});
 				
