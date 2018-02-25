@@ -11,17 +11,18 @@ router.get('/', function (req, res, next) {
 //上传图片
 router.post('/upload', (req, res, next) => {
 
-  var targetDir = './'
+  var targetDir = './public/userImg/'
   var form = new multiparty.Form({
-    "uploadDir": './'
+    "uploadDir": './public/userImg'
   });
   form.parse(req, function (err, fields, files) {
     if (err) {
+      console.log(err)
       
       return res.status(500).send({ errcode: "500", msg: err })
     }
     try {
-      var originalFile = files.file[0].originalFilename
+      var originalFile = targetDir + files.file[0].originalFilename
       fs.renameSync(files.file[0].path, originalFile);
       console.log(originalFile)
       res.send({ status: 'ok' })
@@ -33,9 +34,30 @@ router.post('/upload', (req, res, next) => {
   })
 })
 
+let  join = require('path').join;
+function findSync(startPath) {
+    let result=[];
+    function finder(path) {
+        let files=fs.readdirSync(path);
+        files.forEach((val,index) => {
+            let fPath=join(path,val);
+            let stats=fs.statSync(fPath);
+            if(stats.isDirectory()) finder(fPath);
+            if(stats.isFile()) result.push(fPath);
+        });
+
+    }
+    finder(startPath);
+    return result;
+}
+
+
 //获取已上传图片
 router.get('/imgs', (req, res, next) => {
-
+  let fileNames=findSync('./public/userImg');
+  res.send({
+    data:fileNames
+  })
 })
 
 module.exports = router;
