@@ -1,232 +1,247 @@
 <!doctype html>
 <html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>法兔兔 - 图片原创保护维权平台</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Dashboard">
+	<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <!-- Bootstrap core CSS -->
+	<title>法兔兔 - 图片原创保护维权平台</title>
+
+	<!-- Bootstrap core CSS -->
 	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--external css-->
+	<!--external css-->
 	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/style/base.css">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/style/base.css">
+	<link href="assets/css/style-responsive.css" rel="stylesheet">
 	<style>
-	a {
-		color: #18d26e;
-		transition: 0.5s;
-	}
-	a:hover, a:active, a:focus {
-		color: #18d36e;
-		outline: none;
-		text-decoration: none;
-	}
+		a {
+			color: #18d26e;
+			transition: 0.5s;
+		}
 
-	/* Back to top button */
-	.back-to-top, .start-to-chat {
-		position: fixed;
-		display: none;
-		background: #18d26e;
-		color: #fff;
-		display: inline-block;
-		width: 44px;
-		height: 44px;
-		text-align: center;
-		line-height: 1;
-		font-size: 16px;
-		border-radius: 50%;
-		right: 15px;
-		bottom: 15px;
-		transition: background 0.5s;
-		z-index: 11;
-	}
+		a:hover,
+		a:active,
+		a:focus {
+			color: #18d36e;
+			outline: none;
+			text-decoration: none;
+		}
+		/* Back to top button */
 
-	.start-to-chat{
-		bottom: 80px;
-		display: block;
-	}
+		.back-to-top,
+		.start-to-chat {
+			position: fixed;
+			display: none;
+			background: #18d26e;
+			color: #fff;
+			display: inline-block;
+			width: 44px;
+			height: 44px;
+			text-align: center;
+			line-height: 1;
+			font-size: 16px;
+			border-radius: 50%;
+			right: 15px;
+			bottom: 15px;
+			transition: background 0.5s;
+			z-index: 11;
+		}
 
-	.back-to-top i, .start-to-chat i {
-		padding-top: 12px;
-		color: #fff;
-	}
+		.start-to-chat {
+			bottom: 80px;
+			display: block;
+		}
+
+		.back-to-top i,
+		.start-to-chat i {
+			padding-top: 12px;
+			color: #fff;
+		}
 
 
 
-	
-	iframe{
-		width:100%;
-		height:100%;
-	}
-	.iframe-wrapper{
-		position: fixed;
-		width: 540px;
-		height: 650px;
-		display:none;
-		bottom: 50px;
-		right: 100px;
-		z-index:999999;
-	}
-	.iframe-wrapper .close{
-		position: relative;
-		top: 43px;
-		right: 13px;
-		font-size: 30px;
-		color: white;
-	}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+		.iframe-wrapper {
+			position: fixed;
+			width: 540px;
+			height: 650px;
+			display: none;
+			bottom: 50px;
+			right: 100px;
+			z-index: 999999;
+		}
+
+		.iframe-wrapper .close {
+			position: relative;
+			top: 43px;
+			right: 13px;
+			font-size: 30px;
+			color: white;
+		}
 	</style>
-    <script src="assets/js/chart-master/Chart.js"></script>
+	<script src="assets/js/chart-master/Chart.js"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
-  <section id="container" >
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">法兔兔</h5>
-              	  	
-                  <li class="mt">
-                      <a href="uploadImg.html">
+	<section id="container">
+		<!--sidebar start-->
+		<aside>
+			<div id="sidebar" class="nav-collapse ">
+				<!-- sidebar menu start-->
+				<ul class="sidebar-menu" id="nav-accordion">
+
+					<p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+					<h5 class="centered">法兔兔</h5>
+
+					<li class="mt">
+						<a href="uploadImg.html">
                           <i class="fa fa-dashboard"></i>
                           <span>原创保护</span>
                       </a>
-                  </li>
+					</li>
 
-                       <li class="mt">
-                      <a href="panels.html">
+					<li class="mt">
+						<a href="panels.html">
                           <i class="fa fa-dashboard"></i>
                           <span>我的作品</span>
                       </a>
-                  </li>
+					</li>
 
-                       <li class="mt">
-                      <a href="account.html">
+					<li class="mt">
+						<a href="account.html">
                           <i class="fa fa-dashboard"></i>
                           <span>账户管理</span>
                       </a>
-                  </li>
+					</li>
 
-         
 
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
-      
-      <!-- **********************************************************************************************************************************************************
+
+				</ul>
+				<!-- sidebar menu end-->
+			</div>
+		</aside>
+		<!--sidebar end-->
+
+		<!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper site-min-height" style="margin-top: 10px">
+		<!--main content start-->
+		<section id="main-content">
+			<section class="wrapper site-min-height" style="margin-top: 10px">
 
-	<div class="htmleaf-container">
-		<div class="container">
-			<div id="timeline">
-				<div class="timeline-item">
-					<div class="timeline-icon">
-						<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-							<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+				<div class="htmleaf-container">
+					<div class="container">
+						<div id="timeline">
+							<div class="timeline-item">
+								<div class="timeline-icon">
+									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+									</div>
+								</div>
+								<div class="timeline-content third">
+									<h2>侵权流向</h2>
+									<p style="margin-top: 30px;">网址:www.fggada.com</p>
+									<p>时间:2018-01-10</p>
+									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
+    padding: 4px 4px;
+    background-color: orange;color:black'>发起维权</a>
+									<!-- <button style="">发起维权</button> -->
+								</div>
+							</div>
+						</div>
+
+						<div id="timeline">
+							<div class="timeline-item">
+								<div class="timeline-icon">
+									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+									</div>
+								</div>
+								<div class="timeline-content third right">
+									<h2>侵权流向</h2>
+									<p style="margin-top: 30px;">网址:www.fttst.com</p>
+									<p>时间:2018-01-19</p>
+									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
+    padding: 4px 4px;
+    background-color: orange;color:black'>发起维权</a>
+								</div>
+							</div>
+						</div>
+
+						<div id="timeline">
+							<div class="timeline-item">
+								<div class="timeline-icon">
+									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+									</div>
+								</div>
+								<div class="timeline-content third">
+									<h2>侵权流向</h2>
+									<p style="margin-top: 30px;">网址:www.faato.com</p>
+									<p>时间:2018-09-10</p>
+									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
+    padding: 4px 4px;
+    background-color: orange;color:black'>发起维权</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="timeline-content third">
-						<h2>侵权流向</h2>
-						<p style="margin-top: 30px;">网址:www.fggada.com</p>
-						<p>时间:2018-01-10</p>
-						<a href="javascript:void(0)">发起维权</a>
-						<!-- <button style="">发起维权</button> -->
-					</div>
 				</div>
-			</div>
+			</section>
+			<!-- /MAIN CONTENT -->
+		</section>
 
-				<div id="timeline">
-				<div class="timeline-item">
-					<div class="timeline-icon">
-						<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-							<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
-						</div>
-					</div>
-					<div class="timeline-content third right">
-						<h2>侵权流向</h2>
-						<p style="margin-top: 30px;">网址:www.fttst.com</p>
-						<p>时间:2018-01-19</p>
-						<a href="javascript:void(0)">发起维权</a>
-					</div>
-				</div>
+		<!--main content end-->
+		<!--footer start-->
+		<footer class="site-footer">
+			<div class="text-center">
+				&copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
 			</div>
+		</footer>
+		<a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
 
-				<div id="timeline">
-				<div class="timeline-item">
-					<div class="timeline-icon">
-						<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-							<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
-						</div>
-					</div>
-					<div class="timeline-content third">
-					<h2>侵权流向</h2>
-						<p style="margin-top: 30px;">网址:www.faato.com</p>
-						<p>时间:2018-09-10</p>
-						<a href="javascript:void(0)">发起维权</a>
-					</div>
-				</div>
+		<div class="iframe-wrapper">
+			<div class="close">
+				<span class="fa fa-remove"></span>
 			</div>
+			<iframe frameborder="0"></iframe>
 		</div>
-	</div>
-      </section><!-- /MAIN CONTENT -->
-  </section>
+		<!--footer end-->
+	</section>
 
-      <!--main content end-->
-      <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-               &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
-          </div>
-      </footer>
-	  <a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
 
-	  <div class="iframe-wrapper">
-		  <div class="close">
-			  <span class="fa fa-remove"></span>
-		  </div>
-		  <iframe frameborder="0"></iframe>	  
-	  </div>
-      <!--footer end-->
-  </section>
 
- 
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+	<script src="assets/js/jquery.scrollTo.min.js"></script>
+	<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.sparkline.js"></script>
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
+	<!--common script for all pages-->
+	<script src="assets/js/common-scripts.js"></script>
 
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
+	<!--script for this page-->
+	<script src="assets/js/sparkline-chart.js"></script>
 </body>
 
 </html>
