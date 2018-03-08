@@ -47,14 +47,14 @@
 			line-height: 1;
 			font-size: 16px;
 			border-radius: 50%;
-			right: 15px;
+			right: 55px;
 			bottom: 15px;
 			transition: background 0.5s;
 			z-index: 11;
 		}
 
 		.start-to-chat {
-			bottom: 80px;
+			bottom: 45px;
 			display: block;
 		}
 
@@ -89,6 +89,23 @@
 			font-size: 30px;
 			color: white;
 		}
+
+		.spinner-modal{
+  color: #fff;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3)
+}
+.spinner{
+  text-align: center;
+  left: 50%; 
+  top: 40%; 
+  position: absolute;
+}
 	</style>
 	<script src="assets/js/chart-master/Chart.js"></script>
 
@@ -100,6 +117,12 @@
 </head>
 
 <body>
+<div class="spinner-modal" id="js-spinner-modal">
+<div class="spinner">
+<i style="font-size: 70px;" class="fa fa-spinner fa-pulse fa-fw"></i>
+  <!-- <p style="font-size: 45px;" ng-bind="progress+'%'"></p> -->
+</div>
+</div>
 
 	<section id="container">
 		<!--sidebar start-->
@@ -160,9 +183,8 @@
 									<h2>侵权流向</h2>
 									<p style="margin-top: 30px;">网址:www.fggada.com</p>
 									<p>时间:2018-01-10</p>
-									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
-    padding: 4px 4px;
-    background-color: orange;color:black'>发起维权</a>
+									<a href="javascript:void(0)" onclick="alert('已经为您发起维权了！')" style='border: 1px solid #ded5d5;
+    padding: 4px 4px;background-color: orange;color:black'>发起维权</a>
 									<!-- <button style="">发起维权</button> -->
 								</div>
 							</div>
@@ -242,6 +264,17 @@
 
 	<!--script for this page-->
 	<script src="assets/js/sparkline-chart.js"></script>
+
+    <script>
+    	setTimeout(function(){
+    		$('#js-spinner-modal').css({
+    			display:'none'
+    		})
+    	},1500)
+    </script>
+
+
+
 </body>
 
 </html>

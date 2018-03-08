@@ -1,197 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
     <title>法兔兔 - 图片原创保护维权平台</title>
-
     <!-- Bootstrap core CSS -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
-	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-	<style>
-	a {
-		color: #18d26e;
-		transition: 0.5s;
-	}
-	a:hover, a:active, a:focus {
-		color: #18d36e;
-		outline: none;
-		text-decoration: none;
-	}
+    <style>
+    a {
+        color: #18d26e;
+        transition: 0.5s;
+    }
 
-	/* Back to top button */
-	.back-to-top, .start-to-chat {
-		position: fixed;
-		display: none;
-		background: #18d26e;
-		color: #fff;
-		display: inline-block;
-		width: 44px;
-		height: 44px;
-		text-align: center;
-		line-height: 1;
-		font-size: 16px;
-		border-radius: 50%;
-		right: 15px;
-		bottom: 15px;
-		transition: background 0.5s;
-		z-index: 11;
-	}
+    a:hover,
+    a:active,
+    a:focus {
+        color: #18d36e;
+        outline: none;
+        text-decoration: none;
+    }
+    /* Back to top button */
 
-	.start-to-chat{
-		bottom: 80px;
-		display: block;
-	}
+    .back-to-top,
+    .start-to-chat {
+        position: fixed;
+        display: none;
+        background: #18d26e;
+        color: #fff;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 1;
+        font-size: 16px;
+        border-radius: 50%;
+        right: 55px;
+        bottom: 15px;
+        transition: background 0.5s;
+        z-index: 11;
+    }
 
-	.back-to-top i, .start-to-chat i {
-		padding-top: 12px;
-		color: #fff;
-	}
+    .start-to-chat {
+        bottom: 45px;
+        display: block;
+    }
+
+    .back-to-top i,
+    .start-to-chat i {
+        padding-top: 12px;
+        color: #fff;
+    }
 
 
 
-	
-	iframe{
-		width:100%;
-		height:100%;
-	}
-	.iframe-wrapper{
-		position: fixed;
-		width: 540px;
-		height: 650px;
-		display:none;
-		bottom: 50px;
-		right: 100px;
-		z-index:999999;
-	}
-	.iframe-wrapper .close{
-		position: relative;
-		top: 43px;
-		right: 13px;
-		font-size: 30px;
-		color: white;
-	}
-	</style>
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .iframe-wrapper {
+        position: fixed;
+        width: 540px;
+        height: 650px;
+        display: none;
+        bottom: 50px;
+        right: 100px;
+        z-index: 999999;
+    }
+
+    .iframe-wrapper .close {
+        position: relative;
+        top: 43px;
+        right: 13px;
+        font-size: 30px;
+        color: white;
+    }
+    </style>
     <script src="assets/js/chart-master/Chart.js"></script>
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-
-  <section id="container" >
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">法兔兔</h5>
-              	  	
-                  <li class="mt">
-                      <a href="#">
+<body>
+    <section id="container">
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">法兔兔</h5>
+                    <li class="mt">
+                        <a href="#">
                           <i class="fa fa-dashboard"></i>
                           <span>原创保护</span>
                       </a>
-                  </li>
-
-                       <li class="mt">
-                      <a href="panels.html">
+                    </li>
+                    <li class="mt">
+                        <a href="panels.html">
                           <i class="fa fa-dashboard"></i>
                           <span>我的作品</span>
                       </a>
-                  </li>
-
-                       <li class="mt">
-                      <a href="account.html">
+                    </li>
+                    <li class="mt">
+                        <a href="account.html">
                           <i class="fa fa-dashboard"></i>
                           <span>账户管理</span>
                       </a>
-                  </li>
-
-         
-
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
-      
-      <!-- **********************************************************************************************************************************************************
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper site-min-height" style="text-align: center;">
-          	<!-- <h3><i class="fa fa-angle-right"></i>原创保护</h3> -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper site-min-height" style="text-align: center;">
+                <!-- <h3><i class="fa fa-angle-right"></i>原创保护</h3> -->
+                <style type="text/css">
+                .inputfile {
+                    width: 0.1px;
+                    height: 0.1px;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: -1;
+                }
 
-          	<style type="text/css">
-          		.inputfile {
-    width: 0.1px; 
-    height: 0.1px; 
-    opacity: 0; 
-    overflow: hidden; 
-    position: absolute; 
-    z-index: -1;
-}
-.input-icon{
-	border: 1px solid gray;
-  border-radius: 50px;
-	padding: 30px 100px 25px;
-			}
+                .input-icon {
+                    border: 1px solid gray;
+                    border-radius: 50px;
+                    padding: 30px 100px 25px;
+                }
 
-			.steps .submit{
-				font-size:16px !important;
-			}
-          	</style>
-          	<div style="width: 350px;margin: 50px auto">
-         <input type="file" name="file" id="file" class="inputfile" />
-         <label for="file" class="input-icon">
-         	<i class="fa fa-plus" style="font-size: 150px;"></i>
-         </label>
-         <div style="margin-top: 30px" class="steps">
-         	 <input type="submit" value="确认开启保护" class="submit" style="width: 49%" id='js-uploadBtn'>
-         </div>
-     </div>
-
-        
-		</section><!--/wrapper -->
-      </section><!-- /MAIN CONTENT -->
-
-      <!--main content end-->
-      <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-               &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
-          </div>
-      </footer>
-	  <a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
-
-	  <div class="iframe-wrapper">
-		  <div class="close">
-			  <span class="fa fa-remove"></span>
-		  </div>
-		  <iframe frameborder="0"></iframe>	  
-	  </div>
-      <!--footer end-->
-  </section>
-
- 
-
+                .steps .submit {
+                    font-size: 16px !important;
+                }
+                </style>
+            
+                <div style="width: 400px;margin: 50px auto;">
+                    <input type="file" name="file" id="file" class="inputfile" accept="image/*" onchange="viewImg()" />
+                    <label for="file" class="input-icon" id='filsLabel'>
+                        <i class="fa fa-plus" style="font-size: 150px;"></i>
+                    </label>
+                    <img src="" alt="" style="width: 400px;max-height: 400px" id="userImg">
+                    <div style="margin-top: 30px" class="steps">
+                        <input type="submit" value="确认开启保护" class="submit" style="width: 49%" id='js-uploadBtn'>
+                    </div>
+                </div>
+            </section>
+            <!--/wrapper
+        </section>
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
+            </div>
+        </footer>
+        <a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
+        <div class="iframe-wrapper">
+            <div class="close">
+                <span class="fa fa-remove"></span>
+            </div>
+            <iframe frameborder="0"></iframe>
+        </div>
+        <!--footer end-->
+    </section>
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -199,70 +191,67 @@
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="assets/js/jquery.sparkline.js"></script>
-
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
-
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-    
-    
-  <script>
+    <script src="assets/js/sparkline-chart.js"></script>
+    <script>
+    function viewImg() {
+        var file = $('#file').get(0).files[0];
+        var URL = window.URL || window.webkitURL;
+        var imgURL = URL.createObjectURL(file);
+        $('#filsLabel').css({
+          display:'none'
+        })
+        $('#userImg').attr('src', imgURL);
+        // URL.revokeObjectURL(imgURL);
+    }
 
-      //custom select box
-
-  /* $(function(){
-     $('select.styled').customSelect();
-     }); */
-
-  $('.start-to-chat').on('click', function(e) {
-	  
-      $('iframe, .iframe-wrapper').fadeIn();
-	  setTimeout(function() {
-		  $('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=kdjff05320d1f#/robot/product/59cc50b57dfff4352456f23f");
-	  });
-  });
-
-
-  $('.iframe-wrapper').on('mouseover', function(e) {
-      $('body').css({'overflow': "hidden"});
-  });
-
-  $('.iframe-wrapper').on('mouseout', function(e) {
-      $('body').css({'overflow': "auto"});
-  });
-
-  $('.iframe-wrapper .close').on('click', function(e) {
-      $('iframe, .iframe-wrapper').fadeOut();
-  });
-
-     $(function(){
-         $('#js-uploadBtn').click(function(){
-          var fileObj = $('#file').get(0).files[0]
-          var formData = new FormData();
-    formData.append('file', fileObj);
-    $.ajax({
-        url: "/upload",
-        type: "post",
-        dataType: "json",
-        data: formData,
-        async: false,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function (json_data) {
-            alert("恭喜你！上传成功");
-        },
-		error : function(err) {
-			alert("上传失败，请重新尝试")
-		}
+    $('.start-to-chat').on('click', function(e) {
+        $('iframe, .iframe-wrapper').fadeIn();
+        setTimeout(function() {
+            $('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=eldmh0340fd45#/robot/product/59cc50b57dfff4352456f23f");
+        });
     });
-         })
-      });
 
 
+    $('.iframe-wrapper').on('mouseover', function(e) {
+        $('body').css({ 'overflow': "hidden" });
+    });
 
-  </script>
+    $('.iframe-wrapper').on('mouseout', function(e) {
+        $('body').css({ 'overflow': "auto" });
+    });
 
-  </body>
+    $('.iframe-wrapper .close').on('click', function(e) {
+        $('iframe, .iframe-wrapper').fadeOut();
+    });
+
+    $(function() {
+        $('#js-uploadBtn').click(function() {
+            var fileObj = $('#file').get(0).files[0]
+            var formData = new FormData();
+            formData.append('file', fileObj);
+            $.ajax({
+                url: "/upload",
+                type: "post",
+                dataType: "json",
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function(json_data) {
+                    alert("恭喜你！上传成功");
+                    $(window).attr('location','http://localhost:3000/panels.html');
+                },
+                error: function(err) {
+                    alert("上传失败，请重新尝试")
+                }
+            });
+        })
+    });
+    </script>
+</body>
+
 </html>
