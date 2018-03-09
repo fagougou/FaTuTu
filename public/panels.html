@@ -1,241 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="author" content="Dashboard">
-		<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-		<title>法兔兔 - 图片原创保护维权平台</title>
-		<!-- Bootstrap core CSS -->
-		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<!--external css-->
-		<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        
-		<!-- Custom styles for this template -->
-		<link href="assets/css/style.css" rel="stylesheet">
-		<link href="assets/css/style-responsive.css" rel="stylesheet">
-		<style>
-		a {
-			color: #18d26e;
-			transition: 0.5s;
-		}
-		a:hover, a:active, a:focus {
-			color: #18d36e;
-			outline: none;
-			text-decoration: none;
-		}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>FATUTU - Image Copyright Protection Platform</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    a {
+        color: #18d26e;
+        transition: 0.5s;
+    }
 
-		/* Back to top button */
-		.back-to-top, .start-to-chat {
-			position: fixed;
-			display: none;
-			background: #18d26e;
-			color: #fff;
-			display: inline-block;
-			width: 44px;
-			height: 44px;
-			text-align: center;
-			line-height: 1;
-			font-size: 16px;
-			border-radius: 50%;
-			right: 55px;
-			bottom: 15px;
-			transition: background 0.5s;
-			z-index: 11;
-		}
+    a:hover,
+    a:active,
+    a:focus {
+        color: #18d36e;
+        outline: none;
+        text-decoration: none;
+    }
+    /* Back to top button */
 
-		.start-to-chat{
-			bottom: 45px;
-			display: block;
-		}
+    .back-to-top,
+    .start-to-chat {
+        position: fixed;
+        display: none;
+        background: #18d26e;
+        color: #fff;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 1;
+        font-size: 16px;
+        border-radius: 50%;
+        right: 55px;
+        bottom: 15px;
+        transition: background 0.5s;
+        z-index: 11;
+    }
 
-		.back-to-top i, .start-to-chat i {
-			padding-top: 12px;
-			color: #fff;
-		}
+    .start-to-chat {
+        bottom: 45px;
+        display: block;
+    }
+
+    .back-to-top i,
+    .start-to-chat i {
+        padding-top: 12px;
+        color: #fff;
+    }
 
 
-		.twitter-panel {
-			background: #eaeaea;
-		}
-		
-		iframe{
-			width:100%;
-			height:100%;
-		}
-		.iframe-wrapper{
-			position: fixed;
-			width: 540px;
-			height: 650px;
-			display:none;
-			bottom: 50px;
-			right: 100px;
-			z-index:999999;
-		}
-		.iframe-wrapper .close{
-			position: relative;
-			top: 43px;
-			right: 13px;
-			font-size: 30px;
-			color: white;
-		}
+    .twitter-panel {
+        background: #eaeaea;
+    }
 
-		.op-panel{
-			padding: 10px 5px;
-			font-size:16px;
-		}
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
 
-		</style>
+    .iframe-wrapper {
+        position: fixed;
+        width: 540px;
+        height: 650px;
+        display: none;
+        bottom: 50px;
+        right: 100px;
+        z-index: 999999;
+    }
 
-		<script src="assets/js/chart-master/Chart.js"></script>
+    .iframe-wrapper .close {
+        position: relative;
+        top: 43px;
+        right: 13px;
+        font-size: 30px;
+        color: white;
+    }
 
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
+    .op-panel {
+        padding: 10px 5px;
+        font-size: 16px;
+    }
+    </style>
+    <script src="assets/js/chart-master/Chart.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
 			 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 			 <![endif]-->
-	</head>
+</head>
 
-	<body>
-		<section id="container">
-			<aside>
-				<div id="sidebar"  class="nav-collapse ">
-					<!-- sidebar menu start-->
-					<ul class="sidebar-menu" id="nav-accordion">
-						
-              			<p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              			<h5 class="centered">法兔兔</h5>
-              	  		
-						<li class="mt">
-							<a href="uploadImg.html">
+<body>
+    <section id="container">
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">FATUTU</h5>
+                    <li class="mt">
+                        <a href="uploadImg.html">
 								<i class="fa fa-dashboard"></i>
-								<span>原创保护</span>
+								<span>Start Protection</span>
 							</a>
-						</li>
-
-						<li class="mt">
-							<a href="#">
+                    </li>
+                    <li class="mt">
+                        <a href="#">
 								<i class="fa fa-dashboard"></i>
-								<span>我的作品</span>
+								<span>My Work</span>
 							</a>
-						</li>
-
-						<li class="mt">
-							<a href="account.html">
+                    </li>
+                    <li class="mt">
+                        <a href="account.html">
 								<i class="fa fa-dashboard"></i>
-								<span>账户管理</span>
+								<span>Account Setting</span>
 							</a>
-						</li>
-					</ul>
-					<!-- sidebar menu end-->
-				</div>
-			</aside>
-			<!--sidebar end-->
-			
-			<!-- **********************************************************************************************************************************************************
-				 MAIN CONTENT
-				 *********************************************************************************************************************************************************** -->
-			<!--main content start-->
-			<section id="main-content">
-				<section class="wrapper site-min-height" style="margin-top: 0">
-          			<div class="row mt">
-          				<div class="col-lg-12 row" id="img-list">
-          					
-          				</div>
-          			</div>
-					
-				</section><! --/wrapper -->
-			</section><!-- /MAIN CONTENT -->
-			<!--main content end-->
-			<!--footer start-->
-			<footer class="site-footer">
-				<div class="text-center">
-					&copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
-				</div>
-			</footer>
-			<a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
-
-			<div class="iframe-wrapper">
-				<div class="close">
-					<span class="fa fa-remove"></span>
-				</div>
-				<iframe frameborder="0"></iframe>	  
-			</div>
-			<!--footer end-->
-		</section>
-
-		<!-- js placed at the end of the document so the pages load faster -->
-		<script src="assets/js/jquery.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-		<script src="assets/js/jquery.scrollTo.min.js"></script>
-		<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-		<script src="assets/js/jquery.sparkline.js"></script>
-
-		<!--common script for all pages-->
-		<script src="assets/js/common-scripts.js"></script>
-
-		<!--script for this page-->
-		<script src="assets/js/sparkline-chart.js"></script>    
-		
-		<script>
-
-		function updateImgList(urlList) {
-			
-		}
-
-		
-		
-		$.ajax({
-			url: '/imgs',
-			success: function(data){
-  				var imgUrls = data.data.map(function(ele){
-  					return ele.substring(6)
-  				});
-  				imgUrls.push("img/about-plan.jpg");
-				$('#img-list').empty();
-				imgUrls.forEach(function(imgUrl) {
-					$('#img-list').append('<a class="col-lg-4 col-md-4 col-sm-4 mb " href="timeline.html">'+
-						'<div class="twitter-panel pn" style="overflow:hidden">'+
-						'<img src="'+imgUrl+'" class="img-circle" style="height:100%;width:100%">'+
-						'</div>'+
-						'<div class="op-panel">'+
-						'<span class="fa fa-feed"></span> 传播 0 &nbsp;&nbsp;&nbsp;<span class="fa fa-eye"></span> 展示 849 &nbsp;&nbsp;&nbsp;维权 '+
-						'</div>'+
-						'</a>'
-					);	
-				});
-				
-				
-			}
-		});
-
-
-		$('.start-to-chat').on('click', function(e) {
-			
-			$('iframe, .iframe-wrapper').fadeIn();
-			setTimeout(function() {
-				$('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=eldmh0340fd45#/robot/product/59cc50b57dfff4352456f23f");
-			});
-		});
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <style>
+        #portfolio #portfolio-flters li {
+            padding: 5px 10px;
+            margin: 0
+        }
+        </style>
+        <section id="main-content">
+            <section class="wrapper site-min-height" style="margin-top: 0">
+                <div class="row">
+                    <div class="row" id="portfolio" style="padding: 0">
+                        <div class="col-lg-12">
+                            <ul id="portfolio-flters" style="margin-top: 8px;margin-bottom: 8px;margin-left: 15px;">
+                                <!-- <li class="filter-active" onclick="toggleImg('all')">All</li> -->
+                                <li onclick="toggleImg('protect')" class="filter-active">Protecting</li>
+                                <li onclick="toggleImg('tort')">Infringed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 row" id="img-list">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer class="site-footer">
+            <div class="text-center">
+                &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
+            </div>
+        </footer>
+        <a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
+        <div class="iframe-wrapper">
+            <div class="close">
+                <span class="fa fa-remove"></span>
+            </div>
+            <iframe frameborder="0"></iframe>
+        </div>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+    <!--script for this page-->
+    <script src="assets/js/sparkline-chart.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <script>
+    function renderImg(imgUrls, status) {
+        $('#img-list').empty();
+        imgUrls.forEach(function(imgUrl) {
+            var url = '#'
+            if (status) {
+                url = "timeline.html"
+            }
+            $('#img-list').append('<a class="col-lg-4 col-md-4 col-sm-4 mb" href="' + url + '">' +
+                '<div class="twitter-panel pn" style="overflow:hidden">' +
+                '<img src="' + imgUrl + '" class="img-circle" style="height:100%;width:100%">' +
+                '</div>' +
+                '<div class="op-panel">' +
+                '<span class="fa fa-feed"></span> Subscription 0 &nbsp;&nbsp;&nbsp;<span class="fa fa-eye"></span> Displayed 849' +
+                '</div>' +
+                '</a>'
+            );
+        });
+    }
 
 
-		$('.iframe-wrapper').on('mouseover', function(e) {
-			$('body').css({'overflow': "hidden"});
-		});
+    function getImgAll(status) {
+        $.ajax({
+            url: '/imgs',
+            success: function(data) {
+                var imgUrls = data.data.map(function(ele) {
+                    return ele.substring(6)
+                });
+                if (status === 'all') {
+                    imgUrls.push("img/about-plan.jpg");
+                }
+                renderImg(imgUrls);
+            }
+        });
+    }
 
-		$('.iframe-wrapper').on('mouseout', function(e) {
-			$('body').css({'overflow': "auto"});
-		});
+    function toggleImg(status) {
+        if (status === 'tort') {
+            var imgUrls = []
+            imgUrls.push("img/about-plan.jpg");
+            renderImg(imgUrls, status)
+        } else {
+            getImgAll(status)
+        }
+    }
+    toggleImg('protect')
 
-		$('.iframe-wrapper .close').on('click', function(e) {
-			$('iframe, .iframe-wrapper').fadeOut();
-		});
-		</script>
 
-		
 
-	</body>
+
+    $('.start-to-chat').on('click', function(e) {
+
+        $('iframe, .iframe-wrapper').fadeIn();
+        setTimeout(function() {
+            $('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=kmild06638684#/robot/product/59cc50b57dfff4352456f23f");
+        });
+    });
+
+
+    $('.iframe-wrapper').on('mouseover', function(e) {
+        $('body').css({ 'overflow': "hidden" });
+    });
+
+    $('.iframe-wrapper').on('mouseout', function(e) {
+        $('body').css({ 'overflow': "auto" });
+    });
+
+    $('.iframe-wrapper .close').on('click', function(e) {
+        $('iframe, .iframe-wrapper').fadeOut();
+    });
+    </script>
+</body>
+
 </html>

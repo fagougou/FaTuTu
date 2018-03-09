@@ -8,7 +8,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>法兔兔 - 图片原创保护维权平台</title>
+    <title>FATUTU - Image Copyright Protection Platform</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -107,81 +107,47 @@
                 <ul class="sidebar-menu" id="nav-accordion">
 
                     <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                    <h5 class="centered">法兔兔</h5>
+                    <h5 class="centered">FATUTU</h5>
 
                     <li class="mt">
                         <a href="uploadImg.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>原创保护</span>
+                          <span>Start Protection</span>
                       </a>
                     </li>
 
                     <li class="mt">
                         <a href="panels.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>我的作品</span>
+                          <span>My Work</span>
                       </a>
                     </li>
 
                     <li class="mt">
                         <a href="account.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>账户管理</span>
+                          <span>Account Setting</span>
                       </a>
                     </li>
-
-
-
                 </ul>
-                <!-- sidebar menu end-->
             </div>
         </aside>
-        <!--sidebar end-->
-
-        <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-        <!--main content start-->
+        <style>
+            .wrapper_item{
+                flex: 1;
+                font-size: 20px;
+                margin-top: 50px;
+            }
+        </style>
         <section id="main-content">
             <section class="wrapper site-min-height" style="text-align: center;">
-                <!-- <h3><i class="fa fa-angle-right"></i>原创保护</h3> -->
-
-                <style type="text/css">
-                    .inputfile {
-                        width: 0.1px;
-                        height: 0.1px;
-                        opacity: 0;
-                        overflow: hidden;
-                        position: absolute;
-                        z-index: -1;
-                    }
-
-                    .input-icon {
-                        border: 1px solid gray;
-                        padding: 30px 100px 25px;
-                    }
-                </style>
-                <div style="width: 350px;margin: 0 auto">
-
-                </div>
-                <div style="float:left;width:40%;height:200px;font-size: 20px;
-    text-align: center;line-height: 200px;background:url(img/bj.jpg)">已保护图片数：2，370 个</div>
-                <div style="float:left;width:40%;height:200px;font-size: 20px;
-    text-align: center;margin-left:20px;line-height: 200px;background:url(img/bj.jpg)">我的收益：￥68，098 </div>
+            <div style="display: flex;">
+                <div class="wrapper_item">Protecting Pictures: 2,370</div>
+                <div class="wrapper_item">My Balance:  68,098</div>
+            </div>
 
             </section>
-
-            <!--/wrapper -->
         </section>
-        <!-- /MAIN CONTENT -->
-        <!--<div style='background:black;width:30%;height:200px;float:left'>
-
-        </div>
-        <div style='background:red;width:30%;height:200px;float:left'>
-
-        </div>-->
-        <!--main content end-->
-        <!--footer start-->
         <footer class="site-footer">
             <div class="text-center">
                 &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
@@ -195,7 +161,6 @@
             </div>
             <iframe frameborder="0"></iframe>
         </div>
-        <!--footer end-->
     </section>
 
 
@@ -213,7 +178,19 @@
 
     <!--script for this page-->
     <script src="assets/js/sparkline-chart.js"></script>
+   <script>
+           $('.start-to-chat').on('click', function(e) {
+        $('iframe, .iframe-wrapper').fadeIn();
+        setTimeout(function() {
+            $('iframe').attr('src', "https://m.fagougou.com/wx/fromMkt?context-mode=false&mkt=kmild06638684#/robot/product/59cc50b57dfff4352456f23f");
+        });
+    });
 
+               $('.iframe-wrapper .close').on('click', function(e) {
+        $('iframe, .iframe-wrapper').fadeOut();
+    });
+
+   </script>
 
 
 </body>
