@@ -2,279 +2,250 @@
 <html lang="zh">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Dashboard">
-	<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>FATUTU - Image Copyright Protection Platform</title>
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/base.css">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <style>
+    a {
+        color: #18d26e;
+        transition: 0.5s;
+    }
 
-	<title>法兔兔 - 图片原创保护维权平台</title>
+    a:hover,
+    a:active,
+    a:focus {
+        color: #18d36e;
+        outline: none;
+        text-decoration: none;
+    }
+    /* Back to top button */
 
-	<!-- Bootstrap core CSS -->
-	<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!--external css-->
-	<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    .back-to-top,
+    .start-to-chat {
+        position: fixed;
+        display: none;
+        background: #18d26e;
+        color: #fff;
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 1;
+        font-size: 16px;
+        border-radius: 50%;
+        right: 55px;
+        bottom: 15px;
+        transition: background 0.5s;
+        z-index: 11;
+    }
 
-	<!-- Custom styles for this template -->
-	<link href="assets/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/style/base.css">
-	<link href="assets/css/style-responsive.css" rel="stylesheet">
-	<style>
-		a {
-			color: #18d26e;
-			transition: 0.5s;
-		}
+    .start-to-chat {
+        bottom: 45px;
+        display: block;
+    }
 
-		a:hover,
-		a:active,
-		a:focus {
-			color: #18d36e;
-			outline: none;
-			text-decoration: none;
-		}
-		/* Back to top button */
-
-		.back-to-top,
-		.start-to-chat {
-			position: fixed;
-			display: none;
-			background: #18d26e;
-			color: #fff;
-			display: inline-block;
-			width: 44px;
-			height: 44px;
-			text-align: center;
-			line-height: 1;
-			font-size: 16px;
-			border-radius: 50%;
-			right: 55px;
-			bottom: 15px;
-			transition: background 0.5s;
-			z-index: 11;
-		}
-
-		.start-to-chat {
-			bottom: 45px;
-			display: block;
-		}
-
-		.back-to-top i,
-		.start-to-chat i {
-			padding-top: 12px;
-			color: #fff;
-		}
+    .back-to-top i,
+    .start-to-chat i {
+        padding-top: 12px;
+        color: #fff;
+    }
 
 
 
 
-		iframe {
-			width: 100%;
-			height: 100%;
-		}
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
 
-		.iframe-wrapper {
-			position: fixed;
-			width: 540px;
-			height: 650px;
-			display: none;
-			bottom: 50px;
-			right: 100px;
-			z-index: 999999;
-		}
+    .iframe-wrapper {
+        position: fixed;
+        width: 540px;
+        height: 650px;
+        display: none;
+        bottom: 50px;
+        right: 100px;
+        z-index: 999999;
+    }
 
-		.iframe-wrapper .close {
-			position: relative;
-			top: 43px;
-			right: 13px;
-			font-size: 30px;
-			color: white;
-		}
+    .iframe-wrapper .close {
+        position: relative;
+        top: 43px;
+        right: 13px;
+        font-size: 30px;
+        color: white;
+    }
 
-		.spinner-modal{
-  color: #fff;
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3)
-}
-.spinner{
-  text-align: center;
-  left: 50%; 
-  top: 40%; 
-  position: absolute;
-}
-	</style>
-	<script src="assets/js/chart-master/Chart.js"></script>
+    .spinner-modal {
+        color: #fff;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3)
+    }
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+    .spinner {
+        text-align: center;
+        left: 50%;
+        top: 40%;
+        position: absolute;
+    }
+    </style>
+    <script src="assets/js/chart-master/Chart.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-<div class="spinner-modal" id="js-spinner-modal">
-<div class="spinner">
-<i style="font-size: 70px;" class="fa fa-spinner fa-pulse fa-fw"></i>
-  <!-- <p style="font-size: 45px;" ng-bind="progress+'%'"></p> -->
-</div>
-</div>
-
-	<section id="container">
-		<!--sidebar start-->
-		<aside>
-			<div id="sidebar" class="nav-collapse ">
-				<!-- sidebar menu start-->
-				<ul class="sidebar-menu" id="nav-accordion">
-
-					<p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-					<h5 class="centered">法兔兔</h5>
-
-					<li class="mt">
-						<a href="uploadImg.html">
+    <div class="spinner-modal" id="js-spinner-modal">
+        <div class="spinner">
+            <i style="font-size: 70px;" class="fa fa-spinner fa-pulse fa-fw"></i>
+            <!-- <p style="font-size: 45px;" ng-bind="progress+'%'"></p> -->
+        </div>
+    </div>
+    <section id="container">
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <p class="centered"><a href="index.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                    <h5 class="centered">FATUTU</h5>
+                    <li class="mt">
+                        <a href="uploadImg.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>原创保护</span>
+                          <span>Start Protection</span>
                       </a>
-					</li>
-
-					<li class="mt">
-						<a href="panels.html">
+                    </li>
+                    <li class="mt">
+                        <a href="panels.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>我的作品</span>
+                          <span>My Work</span>
                       </a>
-					</li>
-
-					<li class="mt">
-						<a href="account.html">
+                    </li>
+                    <li class="mt">
+                        <a href="account.html">
                           <i class="fa fa-dashboard"></i>
-                          <span>账户管理</span>
+                          <span>Account Setting</span>
                       </a>
-					</li>
-
-
-
-				</ul>
-				<!-- sidebar menu end-->
-			</div>
-		</aside>
-		<!--sidebar end-->
-
-		<!-- **********************************************************************************************************************************************************
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
-		<!--main content start-->
-		<section id="main-content">
-			<section class="wrapper site-min-height" style="margin-top: 10px">
-
-				<div class="htmleaf-container">
-					<div class="container">
-						<div id="timeline">
-							<div class="timeline-item">
-								<div class="timeline-icon">
-									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
-									</div>
-								</div>
-								<div class="timeline-content third">
-									<h2>侵权流向</h2>
-									<p style="margin-top: 30px;">网址:www.fggada.com</p>
-									<p>时间:2018-01-10</p>
-									<a href="javascript:void(0)" onclick="alert('已经为您发起维权了！')" style='border: 1px solid #ded5d5;
-    padding: 4px 4px;background-color: orange;color:black'>发起维权</a>
-									<!-- <button style="">发起维权</button> -->
-								</div>
-							</div>
-						</div>
-
-						<div id="timeline">
-							<div class="timeline-item">
-								<div class="timeline-icon">
-									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
-									</div>
-								</div>
-								<div class="timeline-content third right">
-									<h2>侵权流向</h2>
-									<p style="margin-top: 30px;">网址:www.fttst.com</p>
-									<p>时间:2018-01-19</p>
-									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper site-min-height" style="margin-top: 10px">
+                <div class="htmleaf-container">
+                    <div class="container">
+                        <div id="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+                                        <i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content third">
+                                    <h2>Source of the tort</h2>
+                                    <p style="margin-top: 30px;">URL:www.fggada.com</p>
+                                    <p>Time:2018-01-10</p>
+                                    <a href="javascript:void(0)" onclick="alert('Litigation lanuched')" style='border: 1px solid #ded5d5;
+    padding: 4px 4px;background-color: orange;color:black'>Lanuch litigation</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+                                        <i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content third right">
+                                    <h2>Source of the tort</h2>
+                                    <p style="margin-top: 30px;">URL:www.fttst.com</p>
+                                    <p>Time:2018-01-19</p>
+                                    <a href="javascript:void(0)" onclick="alert('Litigation lanuched')" style='border: 1px solid #ded5d5;
     padding: 4px 4px;
-    background-color: orange;color:black'>发起维权</a>
-								</div>
-							</div>
-						</div>
-
-						<div id="timeline">
-							<div class="timeline-item">
-								<div class="timeline-icon">
-									<div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
-										<i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
-									</div>
-								</div>
-								<div class="timeline-content third">
-									<h2>侵权流向</h2>
-									<p style="margin-top: 30px;">网址:www.faato.com</p>
-									<p>时间:2018-09-10</p>
-									<a href="javascript:void(0)" style='border: 1px solid #ded5d5;
-    padding: 4px 4px;
-    background-color: orange;color:black'>发起维权</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- /MAIN CONTENT -->
-		</section>
-
-		<!--main content end-->
-		<!--footer start-->
-		<footer class="site-footer">
-			<div class="text-center">
-				&copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
-			</div>
-		</footer>
-		<a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
-
-		<div class="iframe-wrapper">
-			<div class="close">
-				<span class="fa fa-remove"></span>
-			</div>
-			<iframe frameborder="0"></iframe>
-		</div>
-		<!--footer end-->
-	</section>
-
-
-
-	<!-- js placed at the end of the document so the pages load faster -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-	<script src="assets/js/jquery.scrollTo.min.js"></script>
-	<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-	<script src="assets/js/jquery.sparkline.js"></script>
-
-	<!--common script for all pages-->
-	<script src="assets/js/common-scripts.js"></script>
-
-	<!--script for this page-->
-	<script src="assets/js/sparkline-chart.js"></script>
-
+    background-color: orange;color:black'>Lanuch litigation</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <div class='trace-icon' style='height: 50px;width: 50px;background-color: #ee4d4d;'>
+                                        <i class="fa fa-exclamation" style='font-size: 28px;margin: 11px 20px;color: #fff;'></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content third">
+                                    <h2>Source of the tort</h2>
+                                    <p style="margin-top: 30px;">URL:www.faato.com</p>
+                                    <p>Time:2018-09-10</p>
+                                    <a href="javascript:void(0)" onclick="alert('Litigation lanuched')" style='border: 1px solid #ded5d5;padding: 4px 4px;background-color: orange;color:black'>Lanuch litigation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /MAIN CONTENT -->
+        </section>
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">
+                &copy; Copyright <strong>Fargogo</strong>. All Rights Reserveds
+            </div>
+        </footer>
+        <a href="#" onclick="" class="start-to-chat"><i class="fa fa-commenting"></i></a>
+        <div class="iframe-wrapper">
+            <div class="close">
+                <span class="fa fa-remove"></span>
+            </div>
+            <iframe frameborder="0"></iframe>
+        </div>
+        <!--footer end-->
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+    <!--script for this page-->
+    <script src="assets/js/sparkline-chart.js"></script>
     <script>
-    	setTimeout(function(){
-    		$('#js-spinner-modal').css({
-    			display:'none'
-    		})
-    	},1500)
+    setTimeout(function() {
+        $('#js-spinner-modal').css({
+            display: 'none'
+        })
+    }, 1500)
     </script>
-
-
-
 </body>
 
 </html>

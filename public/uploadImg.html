@@ -242,11 +242,11 @@
                 contentType: false,
                 processData: false,
                 success: function(json_data) {
-                    alert("恭喜你！上传成功");
+                    alert("Congratulations！Upload successfully");
                     $(window).attr('location','http://localhost:3000/panels.html');
                 },
                 error: function(err) {
-                    alert("上传失败，请重新尝试")
+                    alert("Sorry, upload failed. Please retry.")
                 }
             });
         })
